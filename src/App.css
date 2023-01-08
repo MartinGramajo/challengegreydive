@@ -5,6 +5,10 @@
     "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
+.colorTitulo {
+  color: #ffc900;
+}
+
 .fixed-footer {
   display: flex;
   flex-direction: column;

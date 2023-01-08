@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Swal from "sweetalert2";
 import { db } from "../config/firebase";
 
 export const useFirebase = () => {
@@ -10,7 +11,13 @@ export const useFirebase = () => {
     setLoading(true);
     await db.collection("Formulario").doc().set(dataObject);
     setLoading(false);
-    console.log("nuevo campo agregado en firebase");
+    Swal.fire({
+      icon: "info",
+      html: `<h1 class="fs-4">Formulario enviado</h1>
+    <br>
+    <a class="text-info text-decoration-none " href="/respuestas">Ver Respuestas</a>
+    `,
+    });
   };
 
   // Obtener los datos de firebase

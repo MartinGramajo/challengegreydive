@@ -39,7 +39,7 @@ export default function Footer() {
 
           <Col className="text-center text-md-end" md="4">
             <h5 className="text-white mb-2">Copyright Mago®</h5>
-            <h5 className="text-white mb-0">Tucumán - Argentina 2022</h5>
+            <h5 className="text-white mb-0">Tucumán - Argentina 2023</h5>
           </Col>
         </Row>
       </Container>
