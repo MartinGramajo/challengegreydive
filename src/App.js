@@ -1,10 +1,16 @@
 import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import Resp from './pages/Resp';
 
 function App() {
   return (
-    <div >
-      <h1> hello challenge</h1>
-    </div>
+    <BrowserRouter>
+      <Routes >
+        <Route path="/" element={<Home />} />
+        <Route path="/respuestas" element={<Resp />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
