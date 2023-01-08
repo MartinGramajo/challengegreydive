@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Resp from './pages/Resp';
 import { db } from "./config/firebase"
+import Footer from './components/Footer';
 
 
 function App() {
@@ -35,12 +36,15 @@ function App() {
   }, [])
 
   return (
-    <BrowserRouter>
-      <Routes >
-        <Route path="/" element={<Home addFirebase={addFirebase} loading={loading} />} />
-        <Route path="/respuestas" element={<Resp datos={datos} />} />
-      </Routes>
-    </BrowserRouter>
+    <div className='fixed-footer'>
+      <BrowserRouter>
+        <Routes >
+          <Route path="/" element={<Home addFirebase={addFirebase} loading={loading} />} />
+          <Route path="/respuestas" element={<Resp datos={datos} />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </div>
   );
 }
 

@@ -28,8 +28,7 @@ export default function Home({ addFirebase, loading }) {
   };
 
   return (
-    <div className="container p-4">
-      <h1 className="text-center pb-2"> Challenge Greydive</h1>
+    <div className="container p-md-4 my-2">
       {loading ? (
         <div className="d-flex justify-content-center align-content-center align-items-center p-5 my-5">
           <Spinner
