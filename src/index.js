@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import './firebase'
-import 'bootswatch/dist/superhero/bootstrap.min.css'
+import './config/firebase'
+import 'bootswatch/dist/quartz/bootstrap.min.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
