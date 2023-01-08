@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Item from "../components/Item";
 import datos from "../db/db.json";
 
-export default function Home() {
+export default function Home({ addFirebase }) {
   const items = datos.items;
   // state initial de los inputs
   const initialStateValues = {
@@ -18,6 +18,8 @@ export default function Home() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    addFirebase(values);
+    setValues(...initialStateValues);
   };
 
   const handleInputChange = (e) => {
