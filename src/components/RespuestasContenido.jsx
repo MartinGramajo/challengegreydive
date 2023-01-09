@@ -22,9 +22,9 @@ export default function RespuestasContenido({ dato }) {
       <p>
         <b>¿Acepta los términos y condiciones? </b>
         {dato.terms_and_conditions === "on" ? (
-          <p> Si, acepto los términos y condiciones </p>
+          <span> Si, acepto los términos y condiciones </span>
         ) : (
-          <p> No, acepto los términos y condiciones </p>
+          <span> No, acepto los términos y condiciones </span>
         )}
       </p>
     </div>
