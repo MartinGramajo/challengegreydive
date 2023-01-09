@@ -12,11 +12,13 @@ export const useFirebase = () => {
     await db.collection("Formulario").doc().set(dataObject);
     setLoading(false);
     Swal.fire({
-      icon: "info",
+      icon: "success",
       html: `<h1 class="fs-4">Formulario enviado</h1>
     <br>
-    <a class="text-info text-decoration-none " href="/respuestas">Ver Respuestas</a>
+    <a class="fs-2 color-azul " href="/respuestas">Ver Respuestas</a>
     `,
+      showCloseButton: true,
+      showConfirmButton: false,
     });
   };
 
