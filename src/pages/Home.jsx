@@ -4,7 +4,8 @@ import datos from "../db/db.json";
 import { Spinner } from "react-bootstrap";
 
 export default function Home({ addFirebase, loading }) {
-  // state initial de los inputs
+  const items = datos.items;
+
   const initialStateValues = {
     full_name: "",
     email: "",
@@ -13,7 +14,6 @@ export default function Home({ addFirebase, loading }) {
     terms_and_conditions: "",
   };
 
-  const items = datos.items;
   const [values, setValues] = useState(initialStateValues);
 
   const handleSubmit = (e) => {
@@ -40,8 +40,8 @@ export default function Home({ addFirebase, loading }) {
         </div>
       ) : (
         <form className="card card-body" onSubmit={handleSubmit}>
-          {items.map((item) => (
-            <Item dato={item} handleInputChange={handleInputChange} />
+          {items.map((item, id) => (
+            <Item dato={item} handleInputChange={handleInputChange} key={id} />
           ))}
         </form>
       )}

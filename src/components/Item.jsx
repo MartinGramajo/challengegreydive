@@ -3,7 +3,13 @@ import React from "react";
 export default function Item({ dato, handleInputChange }) {
   return (
     <div className="form-group">
-      <label className="form-label py-2 fs-5">{dato.label}</label>
+      {dato.label === "Enviar" ? (
+        <label className="form-label py-1 fs-5">
+          {dato.label} el formulario
+        </label>
+      ) : (
+        <label className="form-label py-1 fs-5">{dato.label}</label>
+      )}
       {dato.type === "select" ? (
         <select
           className="form-select"
@@ -11,8 +17,8 @@ export default function Item({ dato, handleInputChange }) {
           required={dato.required}
           onChange={handleInputChange}
         >
-          {dato.options.map((option) => (
-            <option value={option.value} name={dato.name}>
+          {dato.options.map((option, id) => (
+            <option value={option.value} name={dato.name} key={id}>
               {option.label}
             </option>
           ))}
